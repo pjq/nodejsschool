@@ -1,4 +1,6 @@
 nodejsschool
 ============
 
-nodejsschool.io
+http://nodeschool.io/
+
+http://jsforcats.com/
