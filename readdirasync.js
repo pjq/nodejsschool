@@ -1,4 +1,5 @@
 var fs=require("fs");
+var path=require("path");
 
 module.exports=function listdir(directory, extension, cb){
     var dir=process.argv[2];
@@ -13,6 +14,11 @@ module.exports=function listdir(directory, extension, cb){
                     cb(err, newlist);
                 }else{
                     //console.log(list);
+
+                    list=list.filter(function(file){
+                        return path.extname(file) == "." +ext
+                    });
+
                     for (var i=0;i<list.length;i++){
                         var fileitem=list[i];
                         if(fileitem.indexOf("."+ext)>0){
